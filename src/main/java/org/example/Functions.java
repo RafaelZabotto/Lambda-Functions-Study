@@ -1,6 +1,5 @@
 package org.example;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.function.*;
 
 public class Functions {
@@ -14,6 +13,8 @@ public class Functions {
       5 - Predicate
       6 - Supplier
      */
+
+    record Plan (String user, String planType, String periodicity) { }
 
     /*
      * Functions receive a one argument and have one return, not necessary the same type
@@ -32,9 +33,7 @@ public class Functions {
     * The method is accessed .accept
     */
 
-    static Consumer<Plan> purchisingPlan = plan -> System.out.println("Congrulations you bought the " + plan.user + " plan for a " + plan.periodicy);
-
-    record Plan (String user, String planType, String periodicy) { }
+    static Consumer<Plan> purchisingPlan = plan -> System.out.println("Congrulations you bought the " + plan.user + " plan for a " + plan.periodicity);
 
     /*
     * BiConsumers are the same of Consumer but, they use two arguments
@@ -42,7 +41,7 @@ public class Functions {
     */
 
     static BiConsumer<Plan, Boolean> checkIfIsRegistred = ((plan, aBoolean) ->
-            System.out.println((aBoolean ? "Hello " + plan.user + " , you are already registred in plan " + plan.planType + " for a " + plan.periodicy :
+            System.out.println((aBoolean ? "Hello " + plan.user + " , you are already registred in plan " + plan.planType + " for a " + plan.periodicity :
                     "You are not registered yet, please choose a plan")));
 
 
