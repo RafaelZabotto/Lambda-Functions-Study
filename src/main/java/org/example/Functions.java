@@ -53,6 +53,6 @@ public class Functions {
     static Predicate<Plan> checkIfIsAPremiumUser = plan -> plan.planType().equals("Gold");
 
     /*
-    * Suplier
+    * Suplier teste 2
     */
 }
