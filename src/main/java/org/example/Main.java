@@ -19,6 +19,9 @@ public class Main {
         System.out.println("\n--- Predicate ---");
         System.out.println(Functions.checkIfIsAPremiumUser.test(plan1));
 
+        System.out.println("\n--- Suplier ---");
+        System.out.println(Functions.getDBConnectionUrlSupplier.get());
+
 
 
     }

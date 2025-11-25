@@ -53,6 +53,9 @@ public class Functions {
     static Predicate<Plan> checkIfIsAPremiumUser = plan -> plan.planType().equals("Gold");
 
     /*
-    * Suplier teste 2
+    * Suplier provides some information
+    * To access the suplier use .get function
     */
+
+    static Supplier<String> getDBConnectionUrlSupplier = () -> "jdbc://localhost:5432/users";
 }
